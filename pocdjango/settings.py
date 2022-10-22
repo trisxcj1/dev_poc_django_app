@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-t%9=%whfp78dirfx*!8r8y)z9$ohum)p=gltp^xbt*=mdkz$w!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
+    '*',
+    
+    # aws link
+    'https://ef6eaffcdfb243cb9165ff6b075a0382.vfs.cloud9.us-east-1.amazonaws.com/'
     ]
 
 
@@ -39,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # custom apps
+    'company'
 ]
 
 MIDDLEWARE = [

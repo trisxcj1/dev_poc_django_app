@@ -26,6 +26,10 @@ def api_overview(request):
         # company
         'Company Information': '/api/company',
         'Company Detail': '/api/company/<str:pk>',
+        
+        # employee
+        'Employee Information': '/api/employee',
+        'Employee Detail': '/api/employee/<str:pk>',
     }
     
     return Response(api_urls)

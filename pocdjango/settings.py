@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'django_filters',
     
     # custom apps
-    'company'
+    'company',
+    'employee'
 ]
 
 MIDDLEWARE = [

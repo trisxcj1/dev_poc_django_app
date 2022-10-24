@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.api_overview, name='home'),
     
     # custom urls
-    path('api/', include('company.urls'))
+    path('api/', include('company.urls')),
+    path('api/', include('employee.urls')),
 ]

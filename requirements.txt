@@ -1,5 +1,13 @@
 asgiref==3.4.1
+
 Django==3.2.16
+djangorestframework==3.14.0
+django-cors-headers==3.10.1
+django-filter==21.1
+psycopg
+
+flake8>=3.6.0
+coreapi>=2.3.3
 numpy==1.19.5
 pandas==1.1.5
 pkg-resources==0.0.0

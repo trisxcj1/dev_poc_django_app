@@ -1,6 +1,7 @@
 # imports
 from django.db import models
 from django.utils import timezone
+import uuid
 
 # company model
 class Company(models.Model):
@@ -16,7 +17,7 @@ class Company(models.Model):
     
     # -------------------------------- Fields --------------------------------
     # ------------ company identity information 
-    compnay_id = models.UUIDField(primary_key=True, editable=False)
+    company_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     company_legal_name = models.CharField(max_length=200)
     company_website_url = models.URLField(max_length=500, null=True, blank=True)
     company_corporation_type = models.CharField(max_length=200, choices=corporation_type_options, blank=True, null=True)
@@ -46,4 +47,4 @@ class Company(models.Model):
     company_updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return f'{self.company_id, self.company_legal_name, self.created_at}'
+        return f'{self.company_id, self.company_legal_name, self.company_created_at}'

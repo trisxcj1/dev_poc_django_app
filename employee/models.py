@@ -1,6 +1,7 @@
 # imports
 from django.db import models
 from django.utils import timezone
+import uuid
 
 # custom imports
 from company.models import Company
@@ -14,7 +15,7 @@ class Employee(models.Model):
     
     # -------------------------------- Fields --------------------------------
     # ------------ employee identity information 
-    employee_id = models.UUIDField(primary_key=True, editable=False)
+    employee_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     employee_first_name = models.CharField(max_length=200)
     employee_last_name = models.CharField(max_length=200)
     employee_linkedin_url = models.URLField(max_length=500, null=True, blank=True)
